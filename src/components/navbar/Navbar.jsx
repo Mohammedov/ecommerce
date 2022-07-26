@@ -11,7 +11,7 @@ function Navbar () {
           <span className="toggler-icon middle-bar"></span>
           <span className="toggler-icon bottom-bar"></span>
         </button>
-        <a className="navbar-brand mx-auto" href="#">
+        <a className="navbar-brand mx-auto" href="/">
           <img src={logo} alt="Logo" width="100vw" />
         </a>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -162,7 +162,7 @@ function Navbar () {
               <a className="nav-link" href="#">Mi cuenta</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Atención al cliente</a>
+              <a className="nav-link" href="/support">Atención al cliente</a>
             </li>
           </ul>
         </div>
