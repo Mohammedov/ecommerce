@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.scss';
+import {Link} from 'react-router-dom';
 
 
 function Header() {
@@ -9,7 +10,10 @@ function Header() {
         <h1 className="TextIntro">Empieza tu compra en Dillons</h1>
         <p className="ParagraphWell">Dillons tu supermercado de confianza donde encontras de todo y si no tenemos lo que busca, es por que no exite.</p>
         <div className="Postal">
-          <button className="button2">Entrar</button>
+          <Link to="card"> 
+          <button className="button2" >Entrar</button>
+          </Link>
+          
         </div>
       </div>
 

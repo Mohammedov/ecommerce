@@ -3,8 +3,11 @@ import './navbar.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import logo from '../../assets/Images/dillons-logo.png';
+import { Link } from 'react-router-dom';
+import { FaShoppingCart } from "react-icons/fa";
 
-function Navbar() {
+
+function Navbar(cartItem) {
 
   return (
     <nav id="navbar" className="navbar navbar-expand-lg">
@@ -17,6 +20,10 @@ function Navbar() {
         <a className="navbar-brand mx-auto" href="#">
           <img src={logo} alt="Logo" width="100vw" />
         </a>
+
+        
+
+
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <form className="form-inline mx-auto my-2 my-lg-0">
             <input className="form-control mx-sm-2" type="search" placeholder="Buscar productos" aria-label="Search"></input>
@@ -164,17 +171,29 @@ function Navbar() {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Mis pedidos</a>
+              <Link to="/cart"><a className="nav-link" href="#">Mis pedidos</a></Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Mi cuenta</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Atención al cliente</a>
+              <Link to="/support" ><a className="nav-link" href="#">Atención al cliente</a></Link>
             </li>
           </ul>
         </div>
+
+        <div className="cart">
+          <Link to="/cart">
+            <FaShoppingCart className="btn-cart" />
+            <b><span className="number-cart">{cartItem.length === {} ? "" : cartItem.length}</span></b>
+          </Link>
+        </div>
+
+
       </div>
+
+
+      
     </nav>
   );
 }
