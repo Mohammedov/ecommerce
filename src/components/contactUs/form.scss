@@ -1,0 +1,28 @@
+form {
+    margin: 15%;
+    justify-content: center !important;
+
+    h1 {
+        font-family: var(--font-title)'Bold';
+        font-size-adjust: width;
+        color: var(--primary-color);
+    }
+    
+    .form-control {
+        background-color: var(--neutral-color_1) !important;
+    }
+
+    .btn-danger {
+        background-color:var(--primary-color)  !important;
+        justify-items: center;
+
+        .buttonSend {
+            background-color: var(--primary-color);
+            font-family: var(--font-text) !important;
+            color: var(--white-color);
+            justify-items: center;
+            border: none;
+    
+        }
+    }
+}
