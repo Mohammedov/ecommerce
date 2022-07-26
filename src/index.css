@@ -16,6 +16,7 @@
   --third-color: #CE0F69;
   --white-color: #FFFFFF;
   --black-color: #000000;
+  --neutral-color: #E9E9E9;
   --neutral-color_0: #F6F6F6;
   --neutral-color_1: #E6E6E6;
   --neutral-color_2: ##BFBFBF;
@@ -28,5 +29,3 @@
 body {
  background-color: var(--white-color);
 }
-
-
