@@ -7,6 +7,7 @@ import Cart from './views/cart/Cart';
 import Card from './container/Cards/Card';
 import Data from './container/Cards/Data';
 import Navbar from './components/navbar/Navbar';
+import CategoryViewPage from './views/categoryViewPage/CategoryViewPage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -49,7 +50,7 @@ function App() {
           <Route path="/support" element={<Support />}/>  
           <Route path="/card" element={<Card productItems={productItems} addToCart={addToCart} cartItem={cartItem}/>} />  
           <Route path="/cart" element={<Cart cartItem={cartItem} productItems={productItems} addToCart={addToCart} decreaseQty={decreaseQty}/>} />  
-    
+          <Route path="/category" element={<CategoryViewPage />}/>  
         </Routes>
     </BrowserRouter>
     
