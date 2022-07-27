@@ -9,6 +9,7 @@ import Navbar from './components/navbar/Navbar';
 import Welcome from './pages/welcome/Welcome';
 import ProductsViewPage from './pages/productsViewPage/ProductsViewPage';
 import Support from './pages/support/Support';
+import Footer from './pages/footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/productsViewPage" element={<ProductsViewPage />} />
           <Route exact path="/support" element={<Support />} />
           </Routes>
+        <Footer />
       </div>
     </Router>
   )

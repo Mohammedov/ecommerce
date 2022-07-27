@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.scss';
-import Dillons from '../../assets/Images/dillons-logo.png'
+import Dillons from '../../assets/Images/dillons-logo.png';
 
 function Footer() {
     return (
@@ -14,7 +14,7 @@ function Footer() {
                     </figure>
                 </div>
                 <div className="box">
-                    <h2>Enlaces de interes</h2>
+                    <h2>Enlaces de interés</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
                 </div>
