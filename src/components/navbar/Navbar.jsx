@@ -1,12 +1,15 @@
 import React from 'react';
 import './navbar.scss';
 import logo from '../../assets/Images/dillons-logo.png';
+import { Link } from 'react-router-dom';
+import { FaShoppingCart } from "react-icons/fa";
 
-function Navbar () {
+function Navbar(cartItem) {
+
   return (
     <nav id="navbar" className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <button id ="toggler" className='navbar-toggler collapsed' type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="toggler" className='navbar-toggler collapsed' type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="toggler-icon top-bar"></span>
           <span className="toggler-icon middle-bar"></span>
           <span className="toggler-icon bottom-bar"></span>
@@ -25,7 +28,7 @@ function Navbar () {
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">
-                <i class="fa-solid fa-bottle-droplet"></i>
+                  <i class="fa-solid fa-bottle-droplet"></i>
                   Aceite, especias y salsas</a>
                 </li>
                 <li><hr class="dropdown-divider"></hr></li>
@@ -95,9 +98,9 @@ function Navbar () {
                 </li>
                 <li><hr class="dropdown-divider"></hr></li>
                 <li><a class="dropdown-item" href="#">
-                    <i class="fa-solid fa-spray-can-sparkles"></i>
-                    Cuidado facial y corporal</a>
-                  </li>
+                  <i class="fa-solid fa-spray-can-sparkles"></i>
+                  Cuidado facial y corporal</a>
+                </li>
                 <li><hr class="dropdown-divider"></hr></li>
                 <li><a class="dropdown-item" href="#">
                   <i class="fa-solid fa-prescription-bottle-medical"></i>
@@ -130,9 +133,9 @@ function Navbar () {
                 </li>
                 <li><hr class="dropdown-divider"></hr></li>
                 <li><a class="dropdown-item" href="#">
-                <i class="fa-solid fa-paw"></i>
+                  <i class="fa-solid fa-paw"></i>
                   Mascotas</a></li>
-                  <li><hr class="dropdown-divider"></hr>
+                <li><hr class="dropdown-divider"></hr>
                 </li>
                 <li><a class="dropdown-item" href="#">
                   <i class="fa-solid fa-cake-candles"></i>
@@ -156,14 +159,29 @@ function Navbar () {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Productos</a>
+              <Link to="/cart"><a className="nav-link" href="#">Mis pedidos</a></Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Atención al cliente</a>
+              <a className="nav-link" href="#">Mi cuenta</a>
+            </li>
+            <li className="nav-item">
+              <Link to="/support" ><a className="nav-link" href="#">Atención al cliente</a></Link>
             </li>
           </ul>
         </div>
+
+        <div className="cart">
+          <Link to="/cart">
+            <FaShoppingCart className="btn-cart" />
+            <b><span className="number-cart">{cartItem.length === {} ? "" : cartItem.length}</span></b>
+          </Link>
+        </div>
+
+
       </div>
+
+
+
     </nav>
   );
 }

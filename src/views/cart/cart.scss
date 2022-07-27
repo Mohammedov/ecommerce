@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
+
+.G-container {
+    align-items: center;
+    align-content: center;
+    
+    
+    .postal-code{
+        position: relative;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+
+        .cart{
+            font-size: 240%;
+        }
+
+    }
+    .container {
+        margin-top: 30px;
+        font-family: 'Source Sans Pro';
+        min-height: 20vh;
+        width: 100%;        
+        display: flex;
+        align-items: center;
+        align-content: center;        
+        white-space: none;
+        margin-bottom: 10px;
+    }
+
+    .cont-img {
+        width: 15%;
+        height: 10vh;
+
+        img {
+            height: 100%;            
+        }
+    }
+
+    .cont-text {
+        width: 12vh;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        justify-content: end;
+        
+
+        .cont-text-1 {
+
+            font-style: normal;
+            font-weight: 200;
+            font-size: 2vh;
+            line-height: 2vh;
+            
+        }
+
+        .cont-text-2 {
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2vh;
+            line-height: 2vh;
+            color: #000000;
+        }
+    }
+
+    .cont-btn {
+        width: 15vh;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        
+
+        .cont-btn-text {
+            margin-left: 8vh;
+        }
+
+        .cont-btn-click {
+            display: flex;
+            justify-content: center;
+            gap: 2vh;
+            height: 5vh;
+
+            .btn-1 {
+                width: 6vh;
+                height: 4vh;
+                background: #CA2128;
+                border-radius: 2vh;
+                color: aliceblue;
+
+
+                .btn-del {
+                    width: 6vh;
+                    height: 3.5vh;
+                    filter: invert(14%) sepia(10%) saturate(100%) hue-rotate(151deg) brightness(105%) contrast(120%);
+                }
+            }
+
+            .btn-2 {
+                width: 6vh;
+                height: 4vh;
+                background: #CA2128;
+                border-radius: 2vh;
+                color: aliceblue;
+
+                .btn-add {
+                    filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(151deg) brightness(105%) contrast(106%);
+                    width: 6vh;
+                    height: 3vh;
+                    margin-top: 0.5vh;
+                    color: aliceblue;
+                }
+            }
+        }
+
+    }
+
+
+
+
+}
