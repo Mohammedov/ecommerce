@@ -14,7 +14,7 @@ function Navbar(cartItem) {
           <span className="toggler-icon middle-bar"></span>
           <span className="toggler-icon bottom-bar"></span>
         </button>
-        <a className="navbar-brand mx-auto" href="#">
+        <a className="navbar-brand mx-auto" href="/">
           <img src={logo} alt="Logo" width="100vw" />
         </a>
 
