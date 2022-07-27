@@ -1,19 +1,22 @@
+
+import DisplayData from '../functions/DisplayData';
 import {useState, useEffect} from 'react';
-import GetToken from './GetToken';
+
+
 
 function GetProducts(props) {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
-    
+   
     
     // Note: the empty deps array [] means
     // this useEffect will run once
     // similar to componentDidMount()
     useEffect(() => {
-        fetch("https://api.kroger.com/v1/products?filter.term=milk"+ props.query +"&filter.locationId=01400441", {
+        fetch("https://api.kroger.com/v1/products?filter.term="+ props.query +"&filter.locationId=01400441", {
             headers: {
-              Authorization: "Bearer "+ <GetToken/>,
+              Authorization: "Bearer " + props.key,
               "Cache-Control": "no-cache"
             }
           }).then(res => res.json())
@@ -30,15 +33,16 @@ function GetProducts(props) {
             setError(error);
           }
         )
-    }, )
-    console.log(GetProducts)
+    }, [])
+  
+    
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
       return ( 
-        items
+        <DisplayData data={items.data} />
       );
     }
   }
