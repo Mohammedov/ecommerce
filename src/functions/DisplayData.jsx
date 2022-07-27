@@ -11,7 +11,7 @@ function DisplayData(props) {
                     
                         <div className="card">
                             <div className="row-img">
-                                <img src={productItems.images.sizes[0].url} className="card-img-top" alt="..." />
+                                <img src={productItems.images[1].sizes[3].url} className="card-img-top" alt="..." />
                             </div>
 
                             <div className="card-body">

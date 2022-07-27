@@ -21,7 +21,6 @@ function GetToken(props) {
       }).then(res => res.json())
         .then(
           (result) => {
-            
             setToken(result);
             setIsLoaded(true);
           },
@@ -29,24 +28,26 @@ function GetToken(props) {
           // instead of a catch() block so that we don't swallow
           // exceptions from actual bugs in components.
           (error) => {
-            
             setError(error);
             setIsLoaded(true);
           }
         )
     }, [])
-
+   
     console.log(token);
-  
+    
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
-    } else {
-      return ( <GetProducts query={"milk"} key={token.access_token}  />);
+    } else if (token){
+      return ( 
+        <GetProducts tk={token.access_token} query={"milk"}/>
+      );
     }
   }
 
   export default GetToken;
+   
 
   

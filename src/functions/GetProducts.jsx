@@ -16,21 +16,21 @@ function GetProducts(props) {
     useEffect(() => {
         fetch("https://api.kroger.com/v1/products?filter.term="+ props.query +"&filter.locationId=01400441", {
             headers: {
-              Authorization: "Bearer " + props.key,
+              Authorization: "Bearer " + props.tk,
               "Cache-Control": "no-cache"
             }
           }).then(res => res.json())
         .then(
           (result) => {
-            setIsLoaded(true);
             setItems(result);
+            setIsLoaded(true);
           },
           // Note: it's important to handle errors here
           // instead of a catch() block so that we don't swallow
           // exceptions from actual bugs in components.
           (error) => {
-            setIsLoaded(true);
             setError(error);
+            setIsLoaded(true);
           }
         )
     }, [])
