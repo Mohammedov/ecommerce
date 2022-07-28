@@ -7,7 +7,7 @@ import { FaShoppingCart } from "react-icons/fa";
 function Navbar(cartItem) {
 
   return (
-    <nav id="navbar" className="navbar navbar-expand-lg">
+    <nav id="navbar" className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid">
         <button id="toggler" className='navbar-toggler collapsed' type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="toggler-icon top-bar"></span>
