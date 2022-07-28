@@ -34,14 +34,22 @@ function Navbar(cartItem) {
                 Categorías
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">
-                  <i class="fa-solid fa-bottle-droplet"></i>
-                  Aceite, especias y salsas</a>
+                <li>
+                  <Link to="/oil">
+                    <a class="dropdown-item" href="#">
+                      <i class="fa-solid fa-bottle-droplet"></i>
+                      Aceite, especias y salsas
+                    </a>
+                  </Link>
                 </li>
                 <li><hr class="dropdown-divider"></hr></li>
-                <li><a class="dropdown-item" href="#">
-                  <i class="fa-solid fa-bottle-water"></i>
-                  Agua y refrescos</a>
+                <li> 
+                  <Link to="/water">
+                    <a class="dropdown-item" href="#">
+                      <i class="fa-solid fa-bottle-water"></i>
+                      Agua y refrescos
+                    </a>
+                  </Link>
                 </li>
                 <li><hr class="dropdown-divider"></hr></li>
                 <li><a class="dropdown-item" href="#">

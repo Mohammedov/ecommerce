@@ -42,19 +42,22 @@ form {
 //Desktop
 @media screen and (min-width: 1024px) and (max-width: 1249px) {
     .contact-us {
-        margin-top: -100px;
+        margin-top: -90px;
     }
 }
 
 //Desktop Medium Screen
 @media screen and (min-width: 1250px) and (max-width: 2047px) {
     .contact-us {
-        margin-top: -150px;
+        margin-top: -90px;
     }
 }
 
 //Desktop Big Screen
 @media screen and (min-width: 2048px) {
+    .contact-us {
+        margin-top: -90px;
+    }
 }
 
 
