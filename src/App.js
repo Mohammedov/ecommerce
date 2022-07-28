@@ -8,6 +8,8 @@ import Card from './container/Cards/Card';
 import Data from './container/Cards/Data';
 import Navbar from './components/navbar/Navbar';
 
+import GetToken from './functions/GetToken';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -49,7 +51,7 @@ function App() {
           <Route path="/" element={<Welcome />}/> 
           <Route path="/home" element={<Home />}/>  
           <Route path="/support" element={<Support />}/>  
-          <Route path="/card" element={<Card productItems={productItems} addToCart={addToCart} cartItem={cartItem}/>} />  
+          <Route path="/card" element={<GetToken scope={"product.compact"}/>} />  
           <Route path="/cart" element={<Cart cartItem={cartItem} productItems={productItems} addToCart={addToCart} decreaseQty={decreaseQty}/>} />  
     
         </Routes>
