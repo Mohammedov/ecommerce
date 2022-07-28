@@ -7,7 +7,7 @@ import { FaShoppingCart } from "react-icons/fa";
 function Navbar(cartItem) {
 
   return (
-    <nav id="navbar" className="navbar navbar-expand-lg">
+    <nav id="navbar" className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid">
         <button id="toggler" className='navbar-toggler collapsed' type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="toggler-icon top-bar"></span>
@@ -25,8 +25,8 @@ function Navbar(cartItem) {
         </div>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <form className="form-inline mx-auto my-2 my-lg-0">
-            <input className="form-control mx-sm-2" type="search" placeholder="Buscar productos" aria-label="Search"></input>
+          <form class="form-inline mx-auto my-2 my-lg-0">
+            <input class="form-control-1 mx-sm-2" type="search" placeholder="Buscar productos" aria-label="Search"></input>
           </form>
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item dropdown">
@@ -169,21 +169,11 @@ function Navbar(cartItem) {
               <Link to="/cart"><a className="nav-link" href="#">Mis pedidos</a></Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Mi cuenta</a>
-            </li>
-            <li className="nav-item">
               <Link to="/support" ><a className="nav-link" href="#">Atención al cliente</a></Link>
             </li>
           </ul>
         </div>
-
-      
-
-
       </div>
-
-
-
     </nav>
   );
 }
