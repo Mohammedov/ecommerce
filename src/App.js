@@ -7,8 +7,11 @@ import Cart from './views/cart/Cart';
 import Card from './container/Cards/Card';
 import Data from './container/Cards/Data';
 import Navbar from './components/navbar/Navbar';
+
 import GetToken from './functions/GetToken';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 
 function App() {
