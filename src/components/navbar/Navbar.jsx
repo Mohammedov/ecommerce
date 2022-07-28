@@ -169,9 +169,6 @@ function Navbar(cartItem) {
               <Link to="/cart"><a className="nav-link" href="#">Mis pedidos</a></Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Mi cuenta</a>
-            </li>
-            <li className="nav-item">
               <Link to="/support" ><a className="nav-link" href="#">Atención al cliente</a></Link>
             </li>
           </ul>
