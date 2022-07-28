@@ -1,14 +1,17 @@
 import {useState} from 'react';
 import Grid from './Grid';
 
-const Search = () => {
-  const [search, setSearch] = useState('');
+
+const Search = (props) => {
+  
 
   const handleChange = event => {
-    setSearch(event.target.value);
+    props.sendData(event.target.value);
 
     console.log('value is:', event.target.value);
   };
+
+  
 
   return (
     <div>
@@ -17,10 +20,10 @@ const Search = () => {
         id="search"
         name="search"
         onChange={handleChange}
-        value={search}
+        value={props.sendValue}
       />
 
-      <Grid query={search}/>
+      
     </div>
   );
 };

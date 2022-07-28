@@ -3,8 +3,8 @@ import './navbar.scss';
 import logo from '../../assets/Images/dillons-logo.png';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
-
-function Navbar(cartItem) {
+import Search from '../Search';
+function Navbar(cartItem, props) {
 
   return (
     <nav id="navbar" className="navbar navbar-expand-lg">
@@ -23,7 +23,7 @@ function Navbar(cartItem) {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <form class="form-inline mx-auto my-2 my-lg-0">
-            <input class="form-control mx-sm-2" type="search" placeholder="Buscar productos" aria-label="Search"></input>
+            <Search sendData={props.getData} sendValue={props.getValue}/>
           </form>
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">

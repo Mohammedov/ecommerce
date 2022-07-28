@@ -12,44 +12,22 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
-  const { productItems } = Data
+  const [search, setSearch] = useState('');
 
-  const [cartItem, setCardItem] = useState([])
   
-  const addToCart = (product) => {
-    const productExit = cartItem.find((item) => item.id === product.id)
-
-    if (productExit) {
-      setCardItem(cartItem.map((item) =>
-      (item.id === product.id ?
-        { ...productExit, qty: productExit.qty + 1 } : item)))
-    } else {
-      setCardItem([...cartItem, { ...product, qty: 1 }])
-    }
-  }
-
-  const decreaseQty = (product) => {
-    const productExit = cartItem.find((item) => item.id === product.id)
-    if (productExit.qty === 1) {
-      setCardItem(cartItem.filter((item) => item.id !== product.id))
-    } else {
-      setCardItem(cartItem.map((item) => (item.id === product.id ? { ...productExit, qty: productExit.qty - 1 } : item)))
-    }
-  }
 
   return (
     
   
     
     <BrowserRouter>
-    <Navbar/>
+    <Navbar getSearch={setSearch} getValue={search}/>
         <Routes>
           
           <Route path="/" element={<Welcome />}/> 
           <Route path="/home" element={<Home />}/>  
           <Route path="/support" element={<Support />}/>  
-          <Route path="/card" element={<GetToken scope={"product.compact"}/>} />  
-          <Route path="/cart" element={<Cart cartItem={cartItem} productItems={productItems} addToCart={addToCart} decreaseQty={decreaseQty}/>} />  
+          <Route path="/card" element={<GetToken scope={"product.compact"} find={search}/>} />   
     
         </Routes>
     </BrowserRouter>

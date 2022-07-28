@@ -35,6 +35,14 @@ function GetToken(props) {
     }, [])
    
     console.log(token);
+
+    let busca;
+    if(props.find==""){
+      busca="milk";
+    }
+    else{
+      busca = props.find;
+    }
     
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -42,7 +50,7 @@ function GetToken(props) {
       return <div>Loading...</div>;
     } else if (token){
       return ( 
-        <GetProducts tk={token.access_token} query={"milk"}/>
+        <GetProducts tk={token.access_token} query={busca}/>
       );
     }
   }

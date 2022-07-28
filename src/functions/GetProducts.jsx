@@ -1,5 +1,6 @@
 
 import DisplayData from '../functions/DisplayData';
+
 import {useState, useEffect} from 'react';
 
 
@@ -42,7 +43,9 @@ function GetProducts(props) {
       return <div>Loading...</div>;
     } else {
       return ( 
+        
         <DisplayData data={items.data} />
+        
       );
     }
   }
