@@ -18,7 +18,7 @@ function Form(){
       }, (error) => {
           console.log(error.text);
       });
-     
+      e.target.reset()
   };
 
 
@@ -46,7 +46,7 @@ function Form(){
         <br></br>  
       </div>
       <div className="form-group d-flex justify-content-center"  >
-        <button onClick={sendEmail} type="button" className="btn btn-danger" >  
+        <button type="reset" className="btn btn-danger" >  
            <input type="submit" className= "buttonSend d-flex align-self-center" value="Enviar"   />
         </button>  
       </div>
