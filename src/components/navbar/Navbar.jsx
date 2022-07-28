@@ -26,7 +26,7 @@ function Navbar(cartItem) {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <form class="form-inline mx-auto my-2 my-lg-0">
-            <input class="form-control mx-sm-2" type="search" placeholder="Buscar productos" aria-label="Search"></input>
+            <input class="form-control-1 mx-sm-2" type="search" placeholder="Buscar productos" aria-label="Search"></input>
           </form>
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
@@ -173,14 +173,7 @@ function Navbar(cartItem) {
             </li>
           </ul>
         </div>
-
-      
-
-
       </div>
-
-
-
     </nav>
   );
 }
